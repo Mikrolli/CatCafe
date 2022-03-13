@@ -3,6 +3,7 @@ import Title from "../../ui/title/title";
 import StarCard from "../../ui/star-card/star-card";
 import Button from "../../ui/button/button";
 import { StarItem, StarList, StyledStarsList } from "./styles";
+import { AppRoute } from "../../../const";
 
 
 // список известных котов
@@ -24,7 +25,7 @@ function StarsList({
           </StarList>
         </>
       ) : null}
-      <Button minWidth={353} link="/buy">
+      <Button minWidth={353} link={AppRoute.BUY}>
         Купить билет
       </Button>
     </StyledStarsList>

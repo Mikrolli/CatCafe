@@ -1,18 +1,18 @@
 import React from "react";
 import Header from "../../layout/header/header";
 import Footer from "../../layout/footer/footer";
-import MainPage from "../../pages/main-page/main-page";
 import { Main } from "./styles";
 
-//Обертка для контента страницы
-function PageWrapper({ childern, ...prop }) {
+//Обертка для контента страниц
+function PageWrapper({
+  pageUrl, // навигация для шапки
+  children // навигация
+}) {
   return (
     <>
-    <Header/>
-      <Main>
-        <MainPage {...prop} />
-      </Main>
-    <Footer/>
+    <Header pageUrl={pageUrl} />
+    <Main>{children}</Main>
+    <Footer />
     </>
   );
 }
